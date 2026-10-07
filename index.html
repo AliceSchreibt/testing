@@ -1,0 +1,806 @@
+
+
+
+<!DOCTYPE html>
+<html lang="ru">
+
+
+  
+<head>
+  <meta charset="UTF-8">
+ <meta
+  name="viewport"
+  content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>Насосная станция</title>
+
+  <script type="module"
+    src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js">
+  </script>
+  <style>
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+}
+
+.layout {
+  display: flex;
+  height: auto;
+}
+
+.side-menu {
+  width: 240px;
+  padding: 20px;
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  border-right: 1px solid #ddd;
+}
+
+.side-menu button {
+  width: 100%;
+  text-align: left;
+}
+
+.viewer {
+  flex: 1;              /* занимает всё пространство справа */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+#model {
+  width: 100%;
+  height: 100%;
+}
+    
+.layout{
+  display:flex;
+  gap:30px;
+}
+
+.side-menu{
+  width:220px;
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+
+
+.side-menu button{
+  padding:12px;
+  cursor:pointer;
+}
+
+    
+    
+.side-menu button{
+  padding:14px;
+  border:none;
+  background:#111;
+  color:white;
+  border-radius:10px;
+  cursor:pointer;
+  transition:.3s;
+}
+ 
+
+.side-menu button:hover{
+  transform:translateX(10px);
+}
+    
+    
+    
+
+.components-section{
+    width:100%;
+    padding:80px 10%;
+}
+
+.links-table{
+    width:100%;
+    border-collapse:collapse;
+    font-family:'Century Gothic', sans-serif;
+}
+
+.links-table th{
+    text-align:left;
+    padding:20px;
+    border-bottom:1px solid #ddd;
+    font-weight:600;
+}
+
+.links-table td{
+    padding:22px 20px;
+    border-bottom:1px solid #eee;
+}
+
+.links-table a{
+    color:black;
+    text-decoration:none;
+}
+    
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #ffffff;
+      color: #111111;
+        font-family:
+    "Century Gothic",
+    "Apple Gothic",
+    "Trebuchet MS",
+    Arial,
+    sans-serif;
+      -webkit-text-size-adjust:100%;
+      overflow-x: hidden;
+    }
+
+
+.hero{
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  padding:60px 20px;
+  text-align:center;
+  background:
+    radial-gradient(circle at top,#f4f4f4 0%,#ffffff 60%);
+}
+
+h1{
+  font-size:72px;
+  font-weight:normal;
+  letter-spacing:-2px;
+  margin-bottom:20px;
+}
+
+.subtitle{
+  font-size:22px;
+  color:#666;
+  max-width:700px;
+  line-height:1.6;
+  margin-bottom:40px;
+}
+
+
+
+
+    .passport-btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+
+  padding:16px 34px;
+
+  background:#111;
+  color:#fff;
+
+  border:1px solid #111;
+  border-radius:999px;
+
+  text-decoration:none;
+}
+
+    .passport-btn:hover{
+  background:#333;
+  color:#fff;
+}
+
+  .model-wrapper{
+   width:100%;
+  height:80vh;
+  min-height:700px;
+  margin:0 auto;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+.main-layout{
+  display:flex;
+  gap:30px;
+  width:100%;
+}
+
+.viewer-block{
+  flex:1;
+  width:100%;
+}
+
+.top-menu{
+  width:220px;
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+    
+.links-table td:first-child,
+.links-table th:first-child{
+  white-space:normal;
+  word-break:break-word;
+  overflow-wrap:anywhere;
+}
+
+    
+
+    @media (max-width:768px){
+
+  .model-wrapper{
+    height:350px;
+  }
+
+}
+    
+
+   model-viewer {
+  width: 100%;
+  height: 100%;
+  display:block;
+  background: linear-gradient(to bottom, #f8f8f8, #ececec);
+}
+
+    .section {
+  width: 100%;
+  max-width: 100%;
+  margin: 60px auto;
+  padding: 0 10px;
+  box-sizing:border-box;
+}
+
+
+    .hero,
+.model-wrapper,
+.section,
+.table-container,
+.links-table{
+  max-width:100%;
+}
+
+    h2 {
+      font-size: 52px;
+      font-weight: normal;
+      margin-bottom: 40px;
+      letter-spacing: -1px;
+    }
+
+  @media (max-width:768px){
+
+  .links-table{
+    width:100%;
+    table-layout:fixed;
+  }
+
+  .links-table th,
+  .links-table td{
+    padding:8px 4px;
+    font-size:12px;
+  }
+
+  .links-table th:nth-child(1),
+  .links-table td:nth-child(1){
+    width:50%;
+    word-break:break-word;
+    overflow-wrap:anywhere;
+  }
+
+  .links-table th:nth-child(2),
+  .links-table td:nth-child(2){
+    width:25%;
+    text-align:center;
+  }
+
+  .links-table th:nth-child(3),
+  .links-table td:nth-child(3){
+    width:25%;
+    text-align:center;
+  }
+
+}
+
+ 
+    .links-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .links-table tr {
+      transition: 0.2s ease;
+    }
+
+    .links-table tr:hover {
+      background: #fafafa;
+    }
+
+    .links-table a {
+      color: #111;
+      text-decoration: none;
+      transition: 0.2s ease;
+    }
+
+    .links-table a:hover {
+      opacity: 0.6;
+    }
+
+    .description {
+  width: 100%;
+  max-width: 100%;
+  font-size: 18px;
+  line-height: 1.7;
+  color: #333;
+}
+    
+
+    footer {
+      text-align: center;
+      padding: 60px 20px;
+      color: #777;
+      font-size: 15px;
+    }
+
+
+@media (max-width:768px){
+
+  .hero{
+    padding:30px 15px;
+    min-height:auto;
+  }
+
+  h1{
+    font-size:42px;
+    line-height:1.1;
+    margin-bottom:15px;
+  }
+
+  h2{
+    font-size:36px;
+    margin-bottom:20px;
+  }
+
+  .subtitle{
+    font-size:17px;
+    margin-bottom:25px;
+  }
+
+  .passport-btn{
+    margin-bottom:35px;
+    padding:14px 28px;
+  }
+
+  .model-wrapper{
+    width:100%;
+    height:45vh;
+    min-height:300px;
+    border-radius:20px;
+  }
+
+
+  
+  .section{
+    margin:60px auto;
+    padding:0 15px;
+  }
+
+  .description{
+    font-size:15px;
+    line-height:1.6;
+  }
+
+  .table-container{
+    overflow-x:hidden;
+  }
+
+  .links-table{
+    width:100%;
+    table-layout:fixed;
+  }
+
+  .links-table th,
+  .links-table td{
+    padding:8px 4px;
+    font-size:12px;
+  }
+
+  .links-table th:nth-child(1),
+  .links-table td:nth-child(1){
+    width:50%;
+    white-space:normal;
+    word-break:break-word;
+    overflow-wrap:anywhere;
+  }
+
+  .links-table th:nth-child(2),
+  .links-table td:nth-child(2){
+    width:25%;
+    text-align:center;
+    white-space:nowrap;
+  }
+
+  .links-table th:nth-child(3),
+  .links-table td:nth-child(3){
+    width:25%;
+    text-align:center;
+    white-space:nowrap;
+  }
+
+
+ #description th,
+  #description td{
+    padding:2px 4px;
+    font-size:13px;
+  }
+  
+
+}
+
+
+
+#description table {
+  width: 100%;
+  margin: 30px 0;
+  border-collapse: collapse;
+ table-layout: fixed;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.06);
+}
+
+#description th {
+  background: #fafafa;
+}
+
+#description th,
+#description td {
+  padding: 6px;
+  border: 1px solid #eee;
+}
+
+
+  
+
+#description th,
+#description td{
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}
+
+html,
+body{
+  width:100%;
+  max-width:100%;
+  overflow-x:hidden;
+}
+
+
+    #description h1{
+  font-size:28px;
+}
+
+#description h2{
+  font-size:24px;
+}
+
+#description h3{
+  font-size:20px;
+}
+
+
+
+    .HotspotAnnotation{
+  background:white;
+  border:1px solid #ccc;
+  border-radius:6px;
+  padding:4px 8px;
+  font-family:"Century Gothic", sans-serif;
+  font-size:14px;
+  white-space:nowrap;
+}
+    
+
+.hotspot{
+  background:transparent;
+  border:none;
+}
+
+    
+  </style>
+</head>
+
+<body>
+
+  <div class="layout">
+<!--
+  <div class="side-menu">
+    <button onclick="showPart('pump')">Насос</button>
+    <button onclick="showPart('heat')">Теплообменник</button>
+    <button onclick="showPart('valve')">Задвижка</button>
+  </div>
+-->
+  <div class="viewer">
+   
+    <!--
+    <model-viewer
+      id="model"
+      src="model.glb">
+    </model-viewer>
+
+   -->
+    
+  </div>
+
+</div>
+
+  <section class="hero">
+
+    <h1>Насосная станция</h1>
+ <div class="subtitle">
+      Насосная часть эскимогенератора.
+   
+    </div>
+
+    <a class="passport-btn"
+       href="/public/docs/схема Эскимогенератор чая .pdf"
+       target="_blank">
+      Скачать паспорт
+    </a>
+
+
+    <div class="main-layout">  
+<div class="side-menu">
+
+    <button onclick="showPart('pump')">
+      Насос
+    </button>
+
+    <button onclick="showPart('heat')">
+      Теплообменник
+    </button>
+
+    <button onclick="showPart('valve')">
+      Задвижка
+    </button>
+
+    <button onclick="showPart('glycol')">
+      Пропиленгликоль
+    </button>
+
+</div>
+
+  <div class="viewer-block">  
+    
+   <div class="model-wrapper">
+
+
+     
+ <model-viewer
+  id="model"
+  src="stantion.glb"
+  camera-controls
+  auto-rotate
+  auto-rotate-delay="0"
+  rotation-per-second="2deg"
+  camera-target="0m 0m 0m"
+  interaction-prompt="none"
+  shadow-intensity="1"
+  exposure="1">
+
+
+     
+   <button 
+      class="hotspot"
+      slot="hotspot-1"
+      data-position="1.1283486748831142m -1.9800000001899916m -0.03315082394123875m" 
+      onclick="window.open('/public/docs/блок нагрева пропиленгликоля.PNG')"
+      data-normal="4.440892098500626e-16m -1m -2.189528850507527e-47m"
+      data-visibility-attribute="visible">
+    <div class="HotspotAnnotation">Блок нагрева пропиленгликоля</div>
+    </button>
+   
+  <button
+    class="hotspot" 
+    slot="hotspot-2" 
+    data-position="0.9044743787582423m -0.3018590642862913m -0.31035173275589983m"
+    onclick="window.open('https://www.vseinstrumenti.ru/product/monoblochnyj-flantsevyj-nasosnyj-agregat-purity-pstc-80-160-220-n-100588160-13219957/')"
+    data-normal="-1.0950281856927998e-16m -0.14904314688415032m -0.9888306934793588m" 
+    data-visibility-attribute="visible">
+    <div class="HotspotAnnotation">Насос 1</div>
+    </button>
+   
+  <button class="hotspot" slot="hotspot-3" 
+    data-position="0.05186868880615769m -1.3270644231898143m -0.332118674902295m"
+    onclick="window.open('pump.pdf')"
+    data-normal="-0.9438832789844448m 0m -0.33027920863047533m" 
+    data-visibility-attribute="visible">
+    <div class="HotspotAnnotation">Теплообменник</div>
+    </button>
+
+<button 
+class="hotspot" 
+slot="hotspot-4"
+    data-position="-0.15430411993346027m -1.0660000000521546m -0.03372403759545767m"
+    onclick="window.open('/public/docs/65.04.06.01.00 Рама в сборе.PDF')"
+    data-normal="0m -1m 0m" 
+    data-visibility-attribute="visible">
+        <div class="HotspotAnnotation">Рама</div>
+    </button>
+
+<button 
+class="hotspot" 
+slot="hotspot-5" 
+data-position="0.6528207413921805m -0.9331868689235174m -0.241377208130434m" 
+onclick="window.open('https://www.vseinstrumenti.ru/product/tsentrobezhnyj-monoblochnyj-nasos-leo-xst-50-160-55-5-5-kvt-380v-qmax-72-0-m3h-hmax-32-m-1336-11262770/')"
+data-normal="-0.5992780421357784m -4.909502399686929e-14m -0.8005409597352958m"
+data-visibility-attribute="visible">
+        <div class="HotspotAnnotation">Насос 2</div>
+    </button>
+
+
+
+<button 
+class="hotspot" 
+slot="hotspot-6" 
+data-position="1.6636530250896366m -2.7391758673686364m 0.1926716904675223m" 
+onclick="window.open('/gallery/supps.html')"
+data-normal="-0.14342159226067125m -0.6026885104386266m -0.7849820419975755m" 
+data-visibility-attribute="visible">
+        <div class="HotspotAnnotation">Опора </div>
+    </button>
+
+<button 
+class="hotspot" 
+slot="hotspot-7" 
+data-position="1.7084999996646886m -2.2481930687485887m -0.39936833795782223m" 
+onclick="window.open('https://civilizationzti.ru/product/zatvor-diskovyj-povorotnyj-tecofi-vp-3448-du200-ru16-mezhflancevyj/')"
+data-normal="1m -1.6653345369409055e-16m -3.9252311467080943e-16m" 
+data-visibility-attribute="visible">
+        <div class="HotspotAnnotation">Дисковая задвижка</div>
+    </button>
+   
+   
+    <div class="progress-bar hide" slot="progress-bar">
+    <div class="update-bar"></div>
+    </div>
+
+   
+</model-viewer> 
+ </div>
+
+</div>
+      
+    </div>
+    
+</section>
+
+<section class="section">
+
+  <h2>Комплектующие</h2>
+
+  <div class="table-container">
+
+    <table class="links-table" id="partsTable">
+    </table>
+
+  </div>
+
+</section>
+    
+      
+<section class="section">
+
+  <h2>Описание работы установки</h2>
+
+  <div id="description" class="description"></div>
+
+</section>
+
+  <footer>
+    Industrial Engineering Platform
+  </footer>
+
+
+<script>
+
+fetch('/public/data/list_comp.json')
+
+  .then(response => response.json())
+
+  .then(data => {
+
+    const table = document.getElementById('partsTable');
+
+    table.innerHTML = `
+      <tr>
+        <th>Название</th>
+        <th>Количество</th>
+        <th>Открыть</th>
+      </tr>
+    `;
+
+    data.forEach(item => {
+
+      table.innerHTML += `
+        <tr>
+          <td>${item["Название"]}</td>
+          <td>${item["Количество"]}</td>
+          <td>
+            ${item["Открыть"]
+              ? `<a href="${item["Открыть"]}" target="_blank">Открыть</a>`
+              : '—'}
+          </td>
+        </tr>
+      `;
+
+    });
+
+  });
+
+</script>
+
+
+ <script src="https://unpkg.com/mammoth/mammoth.browser.min.js"></script>
+
+<script>
+fetch('/public/docs/description.docx')
+  .then(response => response.arrayBuffer())
+  .then(arrayBuffer => mammoth.convertToHtml({ arrayBuffer }))
+  .then(result => {
+    document.getElementById('description').innerHTML = result.value;
+  })
+  .catch(error => console.error(error));
+</script>
+
+<script>
+const parts = {
+
+  pump: {
+    target: "0.904m -0.302m -0.310m",
+    orbit: "170deg 118deg 1.6m",
+    pdf: "pump.pdf"
+  },
+
+  heat: {
+    target: "0.052m -1.327m -0.332m",
+    orbit: "180deg 80deg 2m",
+    pdf: "heat.pdf"
+  },
+
+  valve: {
+    target: "1.128m -1.980m -0.033m",
+    orbit: "90deg 75deg 2m",
+    pdf: "valve.pdf"
+  }
+
+}; 
+
+
+  
+function showPart(name) {
+
+  if (!parts[name]) {
+    console.error(`Элемент "${name}" не найден в parts`);
+    return;
+  }
+
+  const model = document.querySelector("#model");
+
+  model.removeAttribute("auto-rotate");
+
+  model.cameraTarget = parts[name].target;
+  model.cameraOrbit = parts[name].orbit;
+}
+
+
+</script>
+
+
+  
+  
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+[
+  {
+    "Название": "Теплообменник",
+    "Количество": 1,
+    "Открыть": ""
+  },
+  {
+    "Название": "Рама в сборе",
+    "Количество": 1,
+    "Открыть":  "/public/docs/65.04.06.01.00 Рама в сборе.PDF"
+  },
+  {
+    "Название": "Блок нагрева пропиленгликоля для оттайки",
+    "Количество": 1,
+    "Открыть": "/public/docs/блок нагрева пропиленгликоля.PNG"
+  },
+  {
+    "Название": "Фильтр DN65",
+    "Количество": 1,
+    "Открыть": "https://stoking.ru/products/filtr-setchatyy-flancevyy-gross-chugun-dn-65-pn-16-s-magnitnoy-vstavkoy"
+  },
+  {
+    "Название": "Затвор Dn65",
+    "Количество": 1,
+    "Открыть": "https://civilizationzti.ru/product/zatvor-diskovyj-povorotnyj-tecofi-vp-3448-du200-ru16-mezhflancevyj/"
+  },
+  {
+    "Название": "Дисковый затвор DN80",
+    "Количество": 1,
+    "Открыть": "https://ridan.ru/product/082X4403R"
+  },
+  {
+    "Название": "Воздуходувка EVL 194.18 3ph",
+    "Количество": 1,
+    "Открыть": "https://erstvak.com/product/vikhrevaya-vozdukhoduvka-erstevak-evl-194-18-3f/"
+  },
+  {
+    "Название": "Воздуходувка EVL 117.22 3ph",
+    "Количество": 1,
+    "Открыть": "https://erstvak.com/product/vikhrevaya-vozdukhoduvka-erstevak-evl-117-22-3f/"
+  },
+  {
+    "Название": "Воздуходувка EVH 13.29",
+    "Количество": 1,
+    "Открыть": "https://erstvak.com/product/vikhrevaya-vozdukhoduvka-erstevak-evh-13-29-3-f/"
+  },
+ {
+    "Название": "Насос 1",
+    "Количество": 1,
+    "Открыть": "https://www.vseinstrumenti.ru/product/nasos-pstg-50-250220-n-22-kvt-400690v-50gts-ip-55-ot-10s-do-120s-s-purity-100601431-20874944/"
+  },
+ {
+    "Название": "Насос 2",
+    "Количество": 1,
+    "Открыть": "https://www.vseinstrumenti.ru/product/tsentrobezhnyj-monoblochnyj-nasos-leo-xst-50-160-55-5-5-kvt-380v-qmax-72-0-m3h-hmax-32-m-1336-11262770/"
+  },
+ {
+    "Название": "Регулируемая опора М30",
+    "Количество": 6,
+    "Открыть": "/gallery/supps.html"
+  }
+]
